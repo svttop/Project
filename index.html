@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Koulen&family=League+Spartan:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Weather App</title>
+  </head>
+  <body>
+    <h1>
+      <span class="emoji" alt="Clear" id="icon"> 😀 </span>
+    </h1>
+
+    <form id="city-search">
+      <input type="text" id="user-input" placeholder="Enter your country" />
+      <input type="submit" id="special-button" value="Search" />
+      <input type = "submit" id="current-button" value = "Current Location"
+    </form>
+
+    <br />
+    <br />
+    <h2>Country</h2>
+    <br />
+
+    <div class="container-temp">
+      <div class="row">
+        <div class="col-10">
+          <h3>
+            Search for a country to see the temperature <span id="temp"></span>
+          </h3>
+        </div>
+        <div class="col-1">
+          <span class="units">
+            <a href="#" id="unit-celsius">°C</a>
+            <a href="#" id="unit-fahrenheit">°F </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <ul>
+      <li><span id="description"> Cloudy </span></li>
+      <li>Wind speed:<span id="wind"> </span></li>
+      <li>Humidity:<span id="humidity"> </span>%</li>
+    </ul>
+    <h4>Monday, 15:00</h4>
+    <br />
+
+    <p class="forecast">🌤❄️ 5-day Weather Forecast 🌧☔️</p>
+    <br />
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <span class="one">
+            <span class="day">Monday</span>
+            <br />
+            <br />
+
+            Currently 15C
+            <br />
+            <br />
+            High / Low
+          </span>
+        </div>
+        <div class="col-sm">
+          <span class="one">
+            <span class="day">Tuesday</span>
+            <br />
+            <br />
+
+            Currently 15C
+            <br />
+            <br />
+            High / Low
+          </span>
+        </div>
+        <div class="col-sm">
+          <span class="one">
+            <span class="day">Wednesday</span>
+            <br />
+            <br />
+
+            Currently 15C
+            <br />
+            <br />
+            High / Low
+          </span>
+        </div>
+        <div class="col-sm">
+          <span class="one">
+            <span class="day">Thursday</span>
+            <br />
+            <br />
+
+            Currently 15C
+            <br />
+            <br />
+            High / Low
+          </span>
+        </div>
+        <div class="col-sm">
+          <span class="one">
+            <span class="day">Friday</span>
+            <br />
+            <br />
+
+            Currently 15C
+            <br />
+            <br />
+            High / Low
+          </span>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <p class="coded">
+      Coded by Tiffany 🌻👋🏻
+      <br />
+      <a href="https://github.com/svttop/SheCodes">
+        Open source code on GitHub
+      </a>
+      and <a href="https://github.com/svttop/SheCodes">hosted on Netlify</a>
+    </p>
+  </body>
+
+  <script src="src/javascript.js"></script>
+  <script></script>
+</html>
