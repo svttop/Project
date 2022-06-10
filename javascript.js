@@ -100,7 +100,7 @@ function searchCity(city) {
 function displayTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("h3");
-  temperatureElement.innerHTML = `${temperature} degrees in ${response.data.name}`;
+  temperatureElement.innerHTML = `Currently ${temperature} degrees`;
 }
 let specialButton = document.querySelector("#city-search");
 specialButton.addEventListener("submit", handleClick);
