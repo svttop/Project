@@ -78,6 +78,8 @@ h4 {
 
 .units {
   font-size: 20px;
+  display:inline-block;
+  
 }
 
 ul {
@@ -85,3 +87,5 @@ ul {
   text-align: center;
   padding: 0;
 }
+
+
