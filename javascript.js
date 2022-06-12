@@ -62,7 +62,7 @@ function showTemperature(response) {
   iconElement.innerHTML = `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`;
   descriptionElement.innerHTML = `${response.data.weather[0].description}`;
   humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = `Math.round(response.data.wind.speed) km/h`;
+  windElement.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
 }
 
 function showFahrenheit(event) {
