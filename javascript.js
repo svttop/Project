@@ -55,7 +55,7 @@ function showTemperature(response) {
   let countryElement = document.querySelector("h2");
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("h3");
-  temperatureElement.innerHTML = `Currently ${temperature}`;
+  temperatureElement.innerHTML = `Currently ${temperature}°C`;
   celsiusTemperature = response.data.main.temp;
 
   countryElement.innerHTML = `${response.data.name}`;
