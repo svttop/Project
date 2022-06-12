@@ -71,13 +71,13 @@ function showFahrenheit(event) {
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = `Currently ${Math.round(
     fahrenheitTemperature
-  )}`;
+  )}°F`;
 }
 
 function showCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("h3");
-  temperatureElement.innerHTML = `Currently ${Math.round(celsiusTemperature)}`;
+  temperatureElement.innerHTML = `Currently ${Math.round(celsiusTemperature)}°C`;
 }
 
 let celsiusTemperature = null;
