@@ -59,7 +59,8 @@ function showTemperature(response) {
   celsiusTemperature = response.data.main.temp;
 
   countryElement.innerHTML = `${response.data.name}`;
-  iconElement.setAttribute ("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  //iconElement.setAttribute ("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconElement.innerHTML = `<img src = https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png>`;
   descriptionElement.innerHTML = `${response.data.weather[0].description}`;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
