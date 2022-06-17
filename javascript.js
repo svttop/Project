@@ -1,10 +1,3 @@
-//function myFunction() {
-//document.getElementById("temp").innerHTML = "66";
-//}
-
-//function myFunctionA() {
-//document.getElementById("temp").innerHTML = "19";
-//}
 let now = new Date();
 let h4 = document.querySelector("h4");
 
@@ -47,6 +40,37 @@ function searchCity(city) {
 let specialButton = document.querySelector("#city-search");
 specialButton.addEventListener("submit", handleClick);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#weatherforecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+        <div class="weather-forecast-date">${day}</div>
+        <img
+          src="http://openweathermap.org/img/wn/50d@2x.png"
+          alt=""
+          width="42"
+        />
+        <div class="weather-forecast-temperature">
+          <span class="temperature-high"> 18° </span>
+          <span class="temperature-low"> 12° </span>
+        </div>
+      </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  
+}
+
+
 function showTemperature(response) {
   let iconElement = document.querySelector("h1");
   let descriptionElement = document.querySelector("#description");
@@ -59,7 +83,6 @@ function showTemperature(response) {
   celsiusTemperature = response.data.main.temp;
 
   countryElement.innerHTML = `${response.data.name}`;
-  //iconElement.setAttribute ("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.innerHTML = `<center><img src = https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png width="10%" class="image"></center>`;
   descriptionElement.innerHTML = `${response.data.weather[0].description}`;
   humidityElement.innerHTML = response.data.main.humidity;
@@ -78,7 +101,9 @@ function showFahrenheit(event) {
 function showCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("h3");
-  temperatureElement.innerHTML = `Currently ${Math.round(celsiusTemperature)}°C`;
+  temperatureElement.innerHTML = `Currently ${Math.round(
+    celsiusTemperature
+  )}°C`;
 }
 
 let celsiusTemperature = null;
