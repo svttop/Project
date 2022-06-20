@@ -94,4 +94,6 @@ ul {
 
 #weatherforecast {
   text-align: center;
+  display:block;
+  margin: auto;
 }
