@@ -92,7 +92,7 @@ function displayForecast(response) {
 }
 function getForecast(coordinates) {
   let apiKey = "ff34823356eb24de65ff432da1bc6a20";
-  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -106,6 +106,7 @@ function showTemperature(response) {
   let temperatureElement = document.querySelector("h3");
   temperatureElement.innerHTML = `Currently ${temperature}°C`;
   celsiusTemperature = response.data.main.temp;
+  getForecast(response.data.coord);
 
   countryElement.innerHTML = `${response.data.name}`;
   iconElement.innerHTML = `<center><img src = https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png width="10%" class="image"></center>`;
